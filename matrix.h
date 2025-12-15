@@ -52,6 +52,17 @@ matrix& operator-=(int a);
 matrix& operator*=(int a);
 
 matrix& operator()(double a);
+bool operator==(const matrix& m) const;
+bool operator>(const matrix& m) const;
+bool operator<(const matrix& m) const;
+
+friend matrix operator+(int a, const matrix& m);
+friend matrix operator*(int a, const matrix& m);
+friend matrix operator-(int a, const matrix& m);
+
+
+friend std::ostream& operator<<(std::ostream& o, const matrix& m);
+
 
 
 
