@@ -73,4 +73,26 @@ matrix& matrix::diagonalna_k(int k, int* t) {
             data[idx(i, j)] = t[i];
     }
     return *this;
+}matrix& matrix::kolumna(int x, int* t) {
+    for (int i = 0; i < n; i++) data[idx(i, x)] = t[i];
+    return *this;
+}
+
+matrix& matrix::wiersz(int y, int* t) {
+    for (int i = 0; i < n; i++) data[idx(y, i)] = t[i];
+    return *this;
+}
+
+matrix& matrix::przekatna() {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            data[idx(i, j)] = (i == j);
+    return *this;
+}
+
+matrix& matrix::pod_przekatna() {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            data[idx(i, j)] = (i > j);
+    return *this;
 }
