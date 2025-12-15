@@ -96,3 +96,27 @@ matrix& matrix::pod_przekatna() {
             data[idx(i, j)] = (i > j);
     return *this;
 }
+matrix& matrix::nad_przekatna() {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            data[idx(i, j)] = (i < j);
+    return *this;
+}
+
+matrix& matrix::szachownica() {
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            data[idx(i, j)] = (i + j) % 2;
+    return *this;
+}
+
+
+
+std::ostream& operator<<(std::ostream& o, const matrix& m) {
+    for (int i = 0; i < m.n; i++) {
+        for (int j = 0; j < m.n; j++)
+            o << m.data[m.idx(i, j)] << " ";
+        o << std::endl;
+    }
+    return o;
+}
