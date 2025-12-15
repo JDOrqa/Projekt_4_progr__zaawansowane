@@ -12,7 +12,12 @@ private:
 	std::unique_ptr<int[]> data; // Jednowymiarowa tablica liczb całkowitych(int)	
 
 	int idx(int x, int y) const;
-
+public:
+	matrix();
+	matrix(int n);
+	matrix(int n, int* t);
+	matrix(const matrix& m);
+	~matrix();
 
 
 
