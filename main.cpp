@@ -18,5 +18,8 @@ int main() {
     std::vector<int> t(n);
     for (int i = 0; i < n; i++)
         file >> t[i];
+    matrix A(n);
+    matrix B(n);
+    
 return 0;
 }
