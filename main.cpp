@@ -8,5 +8,12 @@ int main() {
         std::cout << "Blad otwarcia pliku dane.txt\n";
         return 1;
     }
+    int n;
+    file >> n;
+
+    if (n < 30) {
+        std::cout << "Rozmiar macierzy musi byc >= 30\n";
+        return 1;
+    }
 return 0;
 }
