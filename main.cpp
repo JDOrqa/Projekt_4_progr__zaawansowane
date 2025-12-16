@@ -30,5 +30,38 @@ int main() {
     std::cout << " WSTAW / POKAZ \n";
     A.wstaw(0, 0, 99);
     std::cout << "A(0,0) = " << A.pokaz(0, 0) << "\n\n";
+    std::cout << " TRANSPOZYCJA \n";
+    A.dowroc();
+    std::cout << A << std::endl;
+
+    std::cout << " LOSUJ(x) \n";
+    A.losuj(20);
+    std::cout << A << std::endl;
+
+    std::cout << " DIAGONALNA_K \n";
+    A.diagonalna_k(1, t.data());
+    std::cout << A << std::endl;
+
+    std::cout << " KOLUMNA / WIERSZ \n";
+    A.kolumna(0, t.data());
+    A.wiersz(1, t.data());
+    std::cout << A << std::endl;
+
+    std::cout << " PRZEKATNA \n";
+    A.przekatna();
+    std::cout << A << std::endl;
+
+    std::cout << " POD PRZEKATNA \n";
+    A.pod_przekatna();
+    std::cout << A << std::endl;
+
+    std::cout << " NAD PRZEKATNA \n";
+    A.nad_przekatna();
+    std::cout << A << std::endl;
+
+    std::cout << " SZACHOWNICA \n";
+    A.szachownica();
+    std::cout << A << std::endl;
+    
 return 0;
 }
