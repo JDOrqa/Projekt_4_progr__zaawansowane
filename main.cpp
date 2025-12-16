@@ -20,6 +20,8 @@ int main() {
         file >> t[i];
     matrix A(n);
     matrix B(n);
-    
+    std::cout << " LOSOWANIE MACIERZY A \n";
+    A.losuj();
+    std::cout << A << std::endl;
 return 0;
 }
