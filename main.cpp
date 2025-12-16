@@ -23,5 +23,12 @@ int main() {
     std::cout << " LOSOWANIE MACIERZY A \n";
     A.losuj();
     std::cout << A << std::endl;
+    std::cout << " MACIERZ DIAGONALNA B \n";
+    B.diagonalna(t.data());
+    std::cout << B << std::endl;
+
+    std::cout << " WSTAW / POKAZ \n";
+    A.wstaw(0, 0, 99);
+    std::cout << "A(0,0) = " << A.pokaz(0, 0) << "\n\n";
 return 0;
 }
