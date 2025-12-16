@@ -15,5 +15,8 @@ int main() {
         std::cout << "Rozmiar macierzy musi byc >= 30\n";
         return 1;
     }
+    std::vector<int> t(n);
+    for (int i = 0; i < n; i++)
+        file >> t[i];
 return 0;
 }
